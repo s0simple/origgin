@@ -1,417 +1,253 @@
-<header class="bg-white">
-  <nav
-    class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
-    aria-label="Global"
-  >
-    <div class="flex lg:flex-1">
-      <a href="#" class="-m-1.5 p-1.5">
-        <span class="sr-only">Your Company</span>
-        <img
-          class="h-8 w-auto"
-          src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-          alt=""
+import { FaRegCheckCircle } from "react-icons/fa";
+import { BiServer, BiChip } from "react-icons/bi";
+import {
+  HiOutlineOfficeBuilding,
+  HiOutlineLightningBolt,
+} from "react-icons/hi";
+import { PiUserCheckBold } from "react-icons/pi";
+import Head from "next/head";
+
+const Company = () => {
+  const focusAreas = [
+    {
+      icon: <BiChip className="text-[#EF4472] text-3xl" />,
+      title: "Technology",
+      description:
+        "We create ground-breaking technologies that enable the manufacturing, distribution, selling and consumption of electricity in Africa.",
+    },
+    {
+      icon: <HiOutlineOfficeBuilding className="text-[#EF4472] text-3xl" />,
+      title: "Infrastructure",
+      description:
+        "We build reliable systems and structures that scale the availability and accessibility of electricity to everyone in Africa.",
+    },
+    {
+      icon: <HiOutlineLightningBolt className="text-[#EF4472] text-3xl" />,
+      title: "Products",
+      description:
+        "We create high-quality products that enhance the customer experience, making electricity usage seamless and enjoyable.",
+    },
+  ];
+
+  const team = [
+    {
+      image: "/assets/avater1.png",
+      name: "Kane Mani, CEO & CTO",
+      decription:
+        "Leading the vision and direction of Dodo Technologies with a focus on innovation and impact.",
+      membersince: "Co-founded Origgin in 2010",
+      designition1: 'Patron of A "Day In Tech"',
+      designation2: "Co-founder & CEO at Gudu Studios",
+    },
+  ];
+
+  return (
+    <>
+      <Head>
+        <title>About ORIGGIN - Energy Technology Company</title>
+        <meta
+          name="description"
+          content="Learn about ORIGGIN's mission to transform Africa's energy landscape through innovative technology and infrastructure"
         />
-      </a>
-    </div>
-    <div class="flex lg:hidden">
-      <button
-        type="button"
-        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-      >
-        <span class="sr-only">Open main menu</span>
-        <svg
-          class="size-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          aria-hidden="true"
-          data-slot="icon"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
-      </button>
-    </div>
-    <div class="hidden lg:flex lg:gap-x-12">
-      <div class="relative">
-        <button
-          type="button"
-          class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900"
-          aria-expanded="false"
-        >
-          Product
+      </Head>
+
+      <div className="relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute top-0 left-0 -z-10 opacity-50">
           <svg
-            class="size-5 flex-none text-gray-400"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-            data-slot="icon"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
-
-        {/* <!--
-          'Product' flyout menu, show/hide based on flyout menu state.
-
-          Entering: "transition ease-out duration-200"
-            From: "opacity-0 translate-y-1"
-            To: "opacity-100 translate-y-0"
-          Leaving: "transition ease-in duration-150"
-            From: "opacity-100 translate-y-0"
-            To: "opacity-0 translate-y-1"
-        --> */}
-        <div class="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white ring-1 shadow-lg ring-gray-900/5">
-          <div class="p-4">
-            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
-              <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                <svg
-                  class="size-6 text-gray-600 group-hover:text-indigo-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"
-                  />
-                </svg>
-              </div>
-              <div class="flex-auto">
-                <a href="#" class="block font-semibold text-gray-900">
-                  Analytics
-                  <span class="absolute inset-0"></span>
-                </a>
-                <p class="mt-1 text-gray-600">
-                  Get a better understanding of your traffic
-                </p>
-              </div>
-            </div>
-            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
-              <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                <svg
-                  class="size-6 text-gray-600 group-hover:text-indigo-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59"
-                  />
-                </svg>
-              </div>
-              <div class="flex-auto">
-                <a href="#" class="block font-semibold text-gray-900">
-                  Engagement
-                  <span class="absolute inset-0"></span>
-                </a>
-                <p class="mt-1 text-gray-600">
-                  Speak directly to your customers
-                </p>
-              </div>
-            </div>
-            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
-              <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                <svg
-                  class="size-6 text-gray-600 group-hover:text-indigo-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33"
-                  />
-                </svg>
-              </div>
-              <div class="flex-auto">
-                <a href="#" class="block font-semibold text-gray-900">
-                  Security
-                  <span class="absolute inset-0"></span>
-                </a>
-                <p class="mt-1 text-gray-600">
-                  Your customers’ data will be safe and secure
-                </p>
-              </div>
-            </div>
-            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
-              <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                <svg
-                  class="size-6 text-gray-600 group-hover:text-indigo-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z"
-                  />
-                </svg>
-              </div>
-              <div class="flex-auto">
-                <a href="#" class="block font-semibold text-gray-900">
-                  Integrations
-                  <span class="absolute inset-0"></span>
-                </a>
-                <p class="mt-1 text-gray-600">Connect with third-party tools</p>
-              </div>
-            </div>
-            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
-              <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                <svg
-                  class="size-6 text-gray-600 group-hover:text-indigo-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
-                  />
-                </svg>
-              </div>
-              <div class="flex-auto">
-                <a href="#" class="block font-semibold text-gray-900">
-                  Automations
-                  <span class="absolute inset-0"></span>
-                </a>
-                <p class="mt-1 text-gray-600">
-                  Build strategic funnels that will convert
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-            <a
-              href="#"
-              class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
-            >
-              <svg
-                class="size-5 flex-none text-gray-400"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-                data-slot="icon"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              Watch demo
-            </a>
-            <a
-              href="#"
-              class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
-            >
-              <svg
-                class="size-5 flex-none text-gray-400"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-                data-slot="icon"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              Contact sales
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <a href="#" class="text-sm/6 font-semibold text-gray-900">
-        Features
-      </a>
-      <a href="#" class="text-sm/6 font-semibold text-gray-900">
-        Marketplace
-      </a>
-      <a href="#" class="text-sm/6 font-semibold text-gray-900">
-        Company
-      </a>
-    </div>
-    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-      <a href="#" class="text-sm/6 font-semibold text-gray-900">
-        Log in <span aria-hidden="true">&rarr;</span>
-      </a>
-    </div>
-  </nav>
-  {/* <!-- Mobile menu, show/hide based on menu open state. --> */}
-  <div class="lg:hidden" role="dialog" aria-modal="true">
-    {/* <!-- Background backdrop, show/hide based on slide-over state. --> */}
-    <div class="fixed inset-0 z-10"></div>
-    <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-      <div class="flex items-center justify-between">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img
-            class="h-8 w-auto"
-            src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-            alt=""
-          />
-        </a>
-        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-          <span class="sr-only">Close menu</span>
-          <svg
-            class="size-6"
+            width="344"
+            height="439"
+            viewBox="0 0 344 439"
             fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
-            data-slot="icon"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18 18 6M6 6l12 12"
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M-30.6234 96.1563C-8.91268 69.7377 29.2973 67.7353 60.527 53.8054C100.987 35.7583 136.69 -6.82805 180.071 2.17715C222.878 11.0632 239.954 62.4507 267.137 96.6943C295.095 131.915 333.922 161.529 341.719 205.815C349.778 251.59 332.642 298.186 309.732 338.622C287.108 378.553 256.621 418.114 213.13 432.771C171.487 446.805 126.289 430.095 85.2937 414.258C52.5836 401.622 28.5677 376.105 3.35637 351.731C-18.7187 330.39 -42.4335 309.902 -52.6122 280.935C-62.6695 252.313 -56.4364 221.893 -52.8518 191.77C-48.9052 158.606 -51.8271 121.958 -30.6234 96.1563Z"
+              fill="url(#paint0_linear_4_736)"
+              fillOpacity="0.5"
             />
-          </svg>
-        </button>
-      </div>
-      <div class="mt-6 flow-root">
-        <div class="-my-6 divide-y divide-gray-500/10">
-          <div class="space-y-2 py-6">
-            <div class="-mx-3">
-              <button
-                type="button"
-                class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                aria-controls="disclosure-1"
-                aria-expanded="false"
+            <defs>
+              <linearGradient
+                id="paint0_linear_4_736"
+                x1="-6.991"
+                y1="71.9664"
+                x2="293.741"
+                y2="370.581"
+                gradientUnits="userSpaceOnUse"
               >
-                Product
-                {/* <!--
-                  Expand/collapse icon, toggle classes based on menu open state.
-
-                  Open: "rotate-180", Closed: ""
-                --> */}
-                <svg
-                  class="size-5 flex-none"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </button>
-              {/* <!-- 'Product' sub-menu, show/hide based on menu state. --> */}
-              <div class="mt-2 space-y-2" id="disclosure-1">
-                <a
-                  href="#"
-                  class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Analytics
-                </a>
-                <a
-                  href="#"
-                  class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Engagement
-                </a>
-                <a
-                  href="#"
-                  class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Security
-                </a>
-                <a
-                  href="#"
-                  class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Integrations
-                </a>
-                <a
-                  href="#"
-                  class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Automations
-                </a>
-                <a
-                  href="#"
-                  class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Watch demo
-                </a>
-                <a
-                  href="#"
-                  class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Contact sales
-                </a>
-              </div>
-            </div>
-            <a
-              href="#"
-              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-            >
-              Features
-            </a>
-            <a
-              href="#"
-              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-            >
-              Marketplace
-            </a>
-            <a
-              href="#"
-              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-            >
-              Company
-            </a>
-          </div>
-          <div class="py-6">
-            <a
-              href="#"
-              class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-            >
-              Log in
-            </a>
-          </div>
+                <stop stopColor="#FF61C8" stopOpacity="0.4" />
+                <stop offset="1" stopColor="#FFBFC0" stopOpacity="0.6" />
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
+
+        <div className="absolute right-0 top-1/3 -z-10 opacity-50">
+          <svg
+            width="316"
+            height="425"
+            viewBox="0 0 316 425"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M170.353 59.2884C215.074 41.569 252.25 -7.28757 299.643 0.921607C344.062 8.61557 373.288 56.052 391.054 97.5171C408.093 137.289 401.63 182.184 395.666 225.044C390.299 263.615 378.099 300.122 358.203 333.589C338.491 366.746 316.963 402.71 281.313 417.391C246.457 431.745 208.044 410.996 170.353 410.946C132.726 410.896 90.8832 437.968 59.564 417.096C27.8184 395.939 32.2495 347.832 20.9467 311.375C12.0266 282.604 -0.595827 255.163 0.0218306 225.044C0.632163 195.283 8.51987 165.875 24.4461 140.735C40.0316 116.132 63.7513 98.5059 89.1714 84.3163C114.329 70.2731 143.57 69.9008 170.353 59.2884Z"
+              fill="url(#paint0_linear_4_737)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_4_737"
+                x1="201"
+                y1="0"
+                x2="201"
+                y2="425"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#D16DEF" stopOpacity="0.5" />
+                <stop offset="1" stopColor="#F6E1FF" stopOpacity="0.5" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        {/* About Section */}
+        <section className="py-20 md:py-28">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div className="text-center mb-16">
+              <h1 className="text-3xl md:text-4xl font-bold text-[#EF4472] mb-4">
+                Who We Are
+              </h1>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Origgin Ltd is a Ghanaian energy technology company committed to
+                designing and developing technologies for the manufacturing,
+                distribution, sale, and consumption of electricity. Our mission
+                is to address Africa's energy crisis and build a future where
+                reliable and affordable electricity powers sustainable
+                development across the continent.
+              </p>
+            </div>
+
+            {/* Focus Areas */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {focusAreas.map((area, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 h-full flex flex-col items-center text-center border border-gray-100"
+                >
+                  <div className="p-5 bg-[#EF4472]/10 rounded-full mb-5">
+                    {area.icon}
+                  </div>
+                  <h2 className="text-xl font-semibold text-gray-800 mb-3">
+                    {area.title}
+                  </h2>
+                  <p className="text-gray-600">{area.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Mission Section */}
+        <section className="relative py-20 bg-gradient-to-r from-[#EF4472] to-[#D1365C] text-white">
+          {/* Decorative waves */}
+          <div className="absolute top-0 left-0 right-0 overflow-hidden opacity-10">
+            <svg
+              viewBox="0 0 1200 120"
+              className="w-full h-20"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                opacity=".25"
+                fill="currentColor"
+              />
+              <path
+                d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                opacity=".5"
+                fill="currentColor"
+              />
+              <path
+                d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto font-medium opacity-90">
+              To make electricity available and accessible to everyone in Africa
+              through innovative technology solutions.
+            </p>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#EF4472] mb-4">
+                Meet Our Team
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Our team is composed of passionate and skilled professionals
+                dedicated to transforming Africa's energy landscape.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {Array.from({ length: 6 }).map((_, index) => {
+                const person = team[0]; // Using first team member as template
+                return (
+                  <div
+                    key={index}
+                    className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center"
+                  >
+                    <div className="w-32 h-32 rounded-full overflow-hidden mb-5 border-4 border-[#EF4472]/20">
+                      <img
+                        src={person.image}
+                        alt={person.name}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <h3 className="font-medium text-xl text-gray-800 mb-1">
+                      {person.name}
+                    </h3>
+                    <p className="text-gray-500 text-sm mb-4">
+                      {person.decription}
+                    </p>
+                    <div className="space-y-2 text-gray-600 text-sm w-full">
+                      <div className="flex items-start justify-center gap-2">
+                        <FaRegCheckCircle className="text-[#EF4472]" />
+                        <span>{person.membersince}</span>
+                      </div>
+                      <div className="flex items-start justify-center gap-2">
+                        <FaRegCheckCircle className="text-[#EF4472]" />
+                        <span>{person.designition1}</span>
+                      </div>
+                      <div className="flex items-start justify-center gap-2">
+                        <FaRegCheckCircle className="text-[#EF4472]" />
+                        <span>{person.designation2}</span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Values Section */}
       </div>
-    </div>
-  </div>
-</header>;
+    </>
+  );
+};
+
+export default Company;
