@@ -10,6 +10,35 @@
 
 body {
   background-color: #f6f8ff;
+  font-family: "Nunito", sans-serif;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  s 100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.animate-underline {
+  animation: underline 0.3s ease-out;
 }
 
 * {

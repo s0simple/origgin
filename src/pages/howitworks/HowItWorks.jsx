@@ -106,12 +106,14 @@ const HowItWorks = () => {
       </section>
 
       <section className="mb-50 bg-[#EF4472] py-20 pb-30  ">
-        <div className=" text-amber-50 flex flex-col justify-center items-center ">
+        <div className=" text-amber-50 flex flex-col justify-center items-center container mx-auto max-w-6xl">
           <div className="section_top mb-6 text-center mx-auto">
             <div className="section_title">
-              <h3 className="leading-8 font-semibold ">Why Choose Origgin</h3>
+              <h3 className="leading-8 font-semibold text-2xl text-primary  block ">
+                Why Choose Origgin ?
+              </h3>
             </div>
-            <div className="section_description">
+            <div className="section_description mt-5">
               <p className="text-sm">
                 We leverage on our deep knowledge and skill in technology,
                 experience, quality people and functional corporate structure.
@@ -122,47 +124,77 @@ const HowItWorks = () => {
           <div className="setion_content mt-20 ">
             <div className="container mx-auto flex gap-20 items-center  ">
               <div className="left_content flex flex-col gap-20">
-                <div className="lccard">
-                  <h3 className="font-semibold leading-8">
-                    Convenience at Your Command
-                  </h3>
-                  <p className="text-sm">
-                    Buy your prepaid meter with just your voice—anytime,
-                    anywhere.
-                  </p>
-                  <div className="icon_box"></div>
+                <div className="lccard flex gap-8">
+                  <div>
+                    <h3 className="font-semibold leading-8">
+                      Convenience at Your Command
+                    </h3>
+                    <p className="text-sm">
+                      Buy your prepaid meter with just your voice—anytime,
+                      anywhere.
+                    </p>
+                  </div>
+
+                  <div className="icon_box p-5 bg-[#FEE2E2] rounded w-fit h-fit">
+                    <HiOutlineOfficeBuilding
+                      style={{ color: "#EF4472", fontSize: "20px" }}
+                    />
+                  </div>
                 </div>
-                <div className="lccard">
-                  <h3 className="font-semibold leading-8">
-                    Stay Ahead with Alerts
-                  </h3>
-                  <p className="text-sm">
-                    Never be caught off guard. Origgin notifies you to buy on
-                    schedule so you never run out.
-                  </p>
+                <div className="lccard flex gap-x-8">
+                  <div>
+                    <h3 className="font-semibold leading-8">
+                      Stay Ahead with Alerts
+                    </h3>
+                    <p className="text-sm">
+                      Never be caught off guard. Origgin notifies you to buy on
+                      schedule so you never run out.
+                    </p>
+                  </div>
+
+                  <div className="icon_box p-5  bg-[#FEE2E2] h-fit rounded w-fit">
+                    <HiOutlineOfficeBuilding
+                      style={{ color: "#EF4472", fontSize: "20px" }}
+                    />
+                  </div>
                 </div>
               </div>
               <div className="center_image w-[40%]">
                 <img src="/src/assets/api.png.png" alt="" />
               </div>
               <div className="right_content flex flex-col gap-20">
-                <div className="rccard">
-                  <h3 className="leading-8 font-semibold">
-                    Hassle-Free Payments
-                  </h3>
-                  <p className="text-sm">
-                    Recharge your electricity in seconds with a variety of
-                    secure payment options.
-                  </p>
+                <div className="rccard flex gap-x-8">
+                  <div className="icon_box p-5  h-fit bg-[#FEE2E2] rounded w-fit">
+                    <HiOutlineOfficeBuilding
+                      style={{ color: "#EF4472", fontSize: "20px" }}
+                    />
+                  </div>
+                  <div>
+                    <h3 className="leading-8 font-semibold">
+                      Hassle-Free Payments
+                    </h3>
+                    <p className="text-sm">
+                      Recharge your electricity in seconds with a variety of
+                      secure payment options.
+                    </p>
+                  </div>
                 </div>
-                <div className="rcard">
-                  <h3 className="leading-8 font-semibold">
-                    Multi-Meter Control
-                  </h3>
-                  <p className="text-sm">
-                    Perfect for users with multiple properties or business
-                    owners. Manage all your meters with ease.
-                  </p>
+                <div className="rcard flex gap-x-8 items-start gap-20">
+                  <div className="icon_box p-5 bg-[#FEE2E2] h-fit rounded w-fit">
+                    <HiOutlineOfficeBuilding
+                      style={{ color: "#EF4472", fontSize: "20px" }}
+                    />
+                  </div>
+                  <div>
+                    {" "}
+                    <h3 className="leading-8 font-semibold">
+                      Multi-Meter Control
+                    </h3>
+                    <p className="text-sm">
+                      Perfect for users with multiple properties or business
+                      owners. Manage all your meters with ease.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -172,8 +204,8 @@ const HowItWorks = () => {
 
       <section className=" flex flex-col items-center text-sm">
         <div className="wrapper container flex flex-col justify-center items-center content-center mb-50">
-          <div className="flex mx-auto container  items-center justify-center  ">
-            <div className="left_globe  w-1/2 flex  justify-center">
+          <div className="flex mx-auto container max-w-6xl items-center justify-center  ">
+            <div className="left_globe  w-1/2 ">
               <img
                 className="w-[60%] h-[80%] "
                 src="/src/assets/globe.png.png"

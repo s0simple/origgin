@@ -14,7 +14,7 @@ const MainLayout = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="Features" element={<Feature />} />
+        <Route path="/features" element={<Feature />} />
         <Route path="HowItWorks" element={<HowItWorks />} />
         <Route path="Company" element={<Company />} />
         <Route path="*" element={<Error />} />
