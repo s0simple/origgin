@@ -91,16 +91,12 @@ const HowItWorks = () => {
               </p>
             </div>
             <div className="appstorebadges flex gap-x-5">
-              <img
-                src="/src/assets/googleplay.svg"
-                alt=""
-                className="w-[25%]"
-              />
-              <img src="/src/assets/appstore.svg" alt="" className="w-[25%]" />
+              <img src="/assets/googleplay.svg" alt="" className="w-[25%]" />
+              <img src="/assets/appstore.svg" alt="" className="w-[25%]" />
             </div>
           </div>
           <div className="rightcontent w-1/2 ">
-            <img src="/src/assets/half_phone.png" alt="" />
+            <img src="/assets/half_phone.png" alt="" />
           </div>
         </div>
       </section>
@@ -160,7 +156,7 @@ const HowItWorks = () => {
                 </div>
               </div>
               <div className="center_image w-[40%]">
-                <img src="/src/assets/api.png.png" alt="" />
+                <img src="/assets/api.png.png" alt="" />
               </div>
               <div className="right_content flex flex-col gap-20">
                 <div className="rccard flex gap-x-8">
@@ -208,7 +204,7 @@ const HowItWorks = () => {
             <div className="left_globe  w-1/2 ">
               <img
                 className="w-[60%] h-[80%] "
-                src="/src/assets/globe.png.png"
+                src="/assets/globe.png.png"
                 alt=""
               />
             </div>

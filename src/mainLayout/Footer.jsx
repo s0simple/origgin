@@ -10,11 +10,7 @@ const Footer = () => {
     <div>
       <footer class="text-gray-700">
         <div className="">
-          <img
-            className="w-[100%]"
-            src="/src/assets/footer_design.png"
-            alt=""
-          />
+          <img className="w-[100%]" src="/assets/footer_design.png" alt="" />
         </div>
         <div className="bg-[#192132] ">
           <div class=" max-w-screen-xl px-4 py-16 mx-auto sm:px-6 text-gray-300 lg:px-8  w-[100%]">

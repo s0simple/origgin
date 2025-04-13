@@ -26,7 +26,7 @@ const Company = () => {
 
   const team = [
     {
-      image: "/public/assets/avater1.png",
+      image: "/assets/avater1.png",
       name: "Kane Mani, CEO & CTO",
       decription:
         "Leading the vision and direction of Dodo Technologies with a focus on innovation and impact.",
