@@ -108,14 +108,14 @@ const Home = () => {
             <a href="#" className="hover:opacity-90 transition-opacity">
               <img
                 className="h-45"
-                src="/src/assets/googleplay.svg"
+                src="/public/assets/googleplay.svg"
                 alt="Get on Google Play"
               />
             </a>
             <a href="#" className="hover:opacity-90 transition-opacity">
               <img
                 className="h-45"
-                src="/src/assets/appstore.svg"
+                src="/public/assets/appstore.svg"
                 alt="Download on the App Store"
               />
             </a>

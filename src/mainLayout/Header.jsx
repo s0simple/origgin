@@ -141,7 +141,11 @@ const Header = () => {
         <div className="flex justify-between items-center py-3 md:hidden">
           <div className="text-2xl font-bold text-blue-600">
             <NavLink to="/" className="text-2xl ">
-              <img src="/src/assets/logo.png" alt="" className="h-20 w-auto" />
+              <img
+                src="/public/assets/logo.png"
+                alt=""
+                className="h-20 w-auto"
+              />
             </NavLink>
           </div>
           <button
@@ -154,7 +158,7 @@ const Header = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center justify-between py-4">
           <NavLink to="/" className="text-2xl font-bold text-blue-600">
-            <img src="/src/assets/logo.png" alt="" className="h-20 w-auto" />
+            <img src="/public/assets/logo.png" alt="" className="h-20 w-auto" />
           </NavLink>
           <div className="flex space-x-8">
             {links.map((link) => (
