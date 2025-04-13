@@ -108,7 +108,7 @@ const Home = () => {
             <a href="#" className="hover:opacity-90 transition-opacity">
               <img
                 className="h-45"
-                src="/public/assets/googleplay.svg"
+                src="/assets/googleplay.svg"
                 alt="Get on Google Play"
               />
             </a>
