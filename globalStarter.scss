@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Global CSS Starter
+   ========================================================================== */
+
+/**
+ * 1. Use a more-intuitive box-sizing model.
+ */
+ *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /**
+   * 2. Remove default margin and padding
+   */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /**
+   * 3. Allow percentage-based heights in the application
+   */
+  html, body {
+    height: 100%;
+  }
+  
+  /**
+   * 4. Improve text rendering
+   */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+  }
+  
+  /**
+   * 5. Improve media defaults
+   */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /**
+   * 6. Remove built-in form typography styles
+   */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /**
+   * 7. Avoid text overflows
+   */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /**
+   * 8. Create a root stacking context
+   */
+  #root, #__next {
+    isolation: isolate;
+  }
+  
+  /**
+   * 9. Remove list styles on ul, ol elements with a list role
+   */
+  ul[role='list'],
+  ol[role='list'] {
+    list-style: none;
+  }
+  
+  /**
+   * 10. Set core body defaults
+   */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+  }
+  
+  /**
+   * 11. Aria-hidden elements should stay hidden
+   */
+  [aria-hidden="true"] {
+    display: none !important;
+  }
+  
+  /**
+   * 12. Focus styles for keyboard navigation
+   */
+  :focus-visible {
+    outline: 2px solid #4285f4;
+    outline-offset: 2px;
+  }
+  
+  /**
+   * 13. Remove animations for people who've turned them off
+   */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /**
+   * 14. Smooth scrolling
+   */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  /**
+   * 15. Basic typography scale
+   */
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  h4 { font-size: 1.5rem; }
+  h5 { font-size: 1.25rem; }
+  h6 { font-size: 1rem; }
+  
+  /**
+   * 16. Basic spacing variables
+   */
+  :root {
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-xxl: 3rem;
+  }
+  
+  /**
+   * 17. Basic color variables
+   */
+  :root {
+    --color-primary: #4285f4;
+    --color-secondary: #34a853;
+    --color-error: #ea4335;
+    --color-warning: #fbbc05;
+    --color-text: #333;
+    --color-text-light: #666;
+    --color-bg: #fff;
+    --color-bg-alt: #f8f9fa;
+  }
+  
+  /**
+   * 18. Dark mode preferences
+   */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-text: #f8f9fa;
+      --color-text-light: #adb5bd;
+      --color-bg: #212529;
+      --color-bg-alt: #343a40;
+    }
+  }
