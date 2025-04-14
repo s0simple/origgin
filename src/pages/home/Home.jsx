@@ -121,7 +121,7 @@ const Home = () => {
               aria-label="Download ORIGGIN on Google Play"
             >
               <img
-                className="h-10 md:h-12"
+                className="h-24 md:h-24"
                 src="/assets/googleplay.svg"
                 alt="Get on Google Play"
               />
@@ -132,7 +132,7 @@ const Home = () => {
               aria-label="Download ORIGGIN on the App Store"
             >
               <img
-                className="h-10 md:h-12"
+                className="h-24 md:h-24"
                 src="/assets/appstore.svg"
                 alt="Download on the App Store"
               />
