@@ -43,7 +43,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="text-gray-300 bg-[#192132]">
+    <footer className="text-gray-300 ">
       {/* Footer design image */}
       <div className="w-full">
         <img
@@ -53,74 +53,75 @@ const Footer = () => {
           loading="lazy"
         />
       </div>
+      <div className="bg-[#192132]">
+        <div className="max-w-5xl px-4 py-12 mx-auto sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
+            {/* Company Info */}
+            <div className="space-y-4">
+              <img
+                src="/assets/logo_white.png"
+                className="h-8"
+                alt="Origgin logo"
+              />
+              <address className="not-italic text-sm text-gray-400">
+                Origgin Ltd
+                <br />
+                Boundary Road 3,
+                <br />
+                East Legon, Accra.
+                <br />
+                Ghana, West Africa.
+              </address>
+              <a
+                href="tel:+233550068040"
+                className="flex items-center gap-2 text-sm text-gray-400 hover:text-red-300 transition-colors"
+                aria-label="Call us at +233 55 006 8040"
+              >
+                Tel: +233 55 006 8040
+              </a>
+            </div>
 
-      <div className="max-w-5xl px-4 py-12 mx-auto sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <img
-              src="/assets/logo_white.png"
-              className="h-8"
-              alt="Origgin logo"
-            />
-            <address className="not-italic text-sm text-gray-400">
-              Origgin Ltd
-              <br />
-              Boundary Road 3,
-              <br />
-              East Legon, Accra.
-              <br />
-              Ghana, West Africa.
-            </address>
-            <a
-              href="tel:+233550068040"
-              className="flex items-center gap-2 text-sm text-gray-400 hover:text-red-300 transition-colors"
-              aria-label="Call us at +233 55 006 8040"
-            >
-              Tel: +233 55 006 8040
-            </a>
-          </div>
+            {/* Navigation Links */}
+            <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
+              <div>
+                <h3 className="font-medium text-white">Useful Links</h3>
+                <nav className="flex flex-col mt-3 space-y-2 text-sm text-gray-400">
+                  {links.map((link, index) => (
+                    <NavLink
+                      key={index}
+                      to={link.path}
+                      className="hover:text-white transition-colors"
+                    >
+                      {link.name}
+                    </NavLink>
+                  ))}
+                </nav>
+              </div>
+            </div>
 
-          {/* Navigation Links */}
-          <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
-            <div>
-              <h3 className="font-medium text-white">Useful Links</h3>
-              <nav className="flex flex-col mt-3 space-y-2 text-sm text-gray-400">
-                {links.map((link, index) => (
-                  <NavLink
-                    key={index}
-                    to={link.path}
-                    className="hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </NavLink>
-                ))}
-              </nav>
+            {/* Social Links */}
+            <div className="flex items-start gap-4 lg:justify-end">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label={social.name}
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Social Links */}
-          <div className="flex items-start gap-4 lg:justify-end">
-            {socialLinks.map((social, index) => (
-              <a
-                key={index}
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label={social.name}
-              >
-                {social.icon}
-              </a>
-            ))}
+          {/* Copyright */}
+          <div className="pt-8 mt-8 border-t border-gray-800">
+            <p className="text-sm text-center text-gray-400">
+              © {new Date().getFullYear()} All Rights Reserved, Origgin Ltd.
+            </p>
           </div>
-        </div>
-
-        {/* Copyright */}
-        <div className="pt-8 mt-8 border-t border-gray-800">
-          <p className="text-sm text-center text-gray-400">
-            © {new Date().getFullYear()} All Rights Reserved, Origgin Ltd.
-          </p>
         </div>
       </div>
     </footer>
