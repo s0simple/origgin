@@ -13,9 +13,9 @@ const Feature = () => {
         />
       </Head> */}
 
-      <div className="mt-20 relative z-10">
+      <div className=" relative z-10">
         {/* Hero Section with Phone Mockup */}
-        <section className="py-10">
+        <section className="">
           <div className="flex justify-center animate-float">
             <img
               src="/assets/phonemockup.png"
@@ -27,20 +27,20 @@ const Feature = () => {
         </section>
 
         {/* Tagline Section */}
-        <section className="my-16 md:my-24">
+        <section className="my-12 md:my-0 mb-20">
           <div className="flex flex-col items-center text-center px-4">
-            <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-wider mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+            <h1 className="text-xl md:text-2xl font-bold uppercase tracking-wider  bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
               Origgin
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-2">
+            <h2 className="text-xl md:text-xl font-semibold text-gray-800 ">
               Gives You Seamless
             </h2>
             <div className="space-y-1">
-              <p className="text-2xl md:text-3xl font-semibold text-gray-800 mb-2">
+              <p className="text-xl md:text-xl font-semibold text-gray-800 ">
                 Features To Solve Your
               </p>
               <div className="flex justify-center items-center gap-3">
-                <p className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">
+                <p className="text-xl md:text-xl font-bold text-blue-600 ">
                   Problem Easily
                 </p>
                 <PiMicrophoneLight
@@ -54,7 +54,7 @@ const Feature = () => {
 
         {/* Features Section */}
         <section
-          className="py-16 relative md:py-24 mb-50 bg-[#161C2DCC] text-white"
+          className="py-16 mt-20 relative md:py-24 mb-50 bg-[#161C2DCC] text-white"
           aria-labelledby="features-heading"
         >
           {/* Gradient top border */}

@@ -78,21 +78,21 @@ const Home = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="my-20">
+        <section className="">
           <div className="container mx-auto px-4">
-            <div className="text-center mx-auto mb-12 lg:mb-20 max-w-3xl">
-              <div className="font-semibold text-primary space-y-3">
-                <h1 className="text-3xl md:text-4xl mr-7 font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+            <div className="text-center mx-auto mb-5 lg:mb-7 max-w-3xl">
+              <div className="font-semibold text-primary space-y-1">
+                <h1 className="text-xl md:text-2xl mr-7 font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
                   ORIGGIN
                 </h1>
-                <h2 className="text-2xl md:text-3xl text-gray-800">
+                <h2 className="text-xl md:text-xl text-gray-800">
                   Electricity Made Simple,
                 </h2>
-                <div className="text-2xl md:text-3xl flex justify-center items-center gap-3">
+                <div className="text-xl md:text-xl flex justify-center items-center gap-2">
                   <p className="text-[#EF4444] font-semibold">Just Speak.</p>
                   <span className="inline-block transform rotate-[20deg] hover:rotate-[30deg] transition-transform duration-300">
                     <PiMicrophoneLight
-                      className="text-gray-600 text-[44px] animate-pulse"
+                      className="text-gray-600 text-[35px] animate-pulse"
                       aria-hidden="true"
                     />
                   </span>
@@ -103,7 +103,7 @@ const Home = () => {
         </section>
 
         {/* Phone Mockup */}
-        <section className="py-10">
+        <section className="">
           <div className="flex justify-center animate-float">
             <img
               src="/assets/phonemockup.png"
