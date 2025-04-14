@@ -1,58 +1,58 @@
 import React from "react";
-import { Link, NavLink, useLocation } from "react-router";
+import { NavLink, useLocation } from "react-router";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-
-// import { NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const isActive = (path) => {
-    return (
-      location.pathname === path ||
-      (path !== "/" && location.pathname.startsWith(path))
-    );
-  };
-
   const links = [
-    { name: "Features", path: "/Features" },
-    { name: "How it works", path: "/howitworks" },
-    { name: "Company", path: "/Company" },
+    { name: "Features", path: "/features" },
+    { name: "How It Works", path: "/howitworks" },
+    { name: "Company", path: "/company" },
   ];
+
   return (
     <nav className="">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         {/* Mobile menu button */}
-        <div className="flex justify-between items-center py-3 md:hidden">
-          <div className="text-2xl font-bold text-blue-600">
-            <NavLink to="/" className="text-2xl ">
-              <img src="/assets/logo.png" alt="" className="h-20 w-auto" />
-            </NavLink>
-          </div>
+        <div className="flex justify-between items-center py-3 md:py-4 md:hidden">
+          <NavLink to="/">
+            <img
+              src="/assets/logo.png"
+              alt="ORIGGIN Logo"
+              className="h-16 w-auto"
+            />
+          </NavLink>
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-gray-700 focus:outline-none"
+            aria-label="Toggle menu"
           >
-            {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            {isOpen ? <FiX size={20} /> : <FiMenu size={20} />}
           </button>
         </div>
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center justify-between py-4">
-          <NavLink to="/" className="text-2xl font-bold text-blue-600">
-            <img src="/assets/logo.png" alt="" className="h-20 w-auto" />
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center justify-between">
+          <NavLink to="/">
+            <img
+              src="/assets/logo.png"
+              alt="ORIGGIN Logo"
+              className="h-16 w-auto"
+            />
           </NavLink>
-          <div className="flex space-x-8">
+          <div className="flex space-x-6">
             {links.map((link) => (
               <NavLink
-                key={link.name}
+                key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `relative px-1 py-2 transition-colors ${
+                  `relative px-2 py-3 text-sm font-medium transition-colors ${
                     isActive
-                      ? "text-[#EF4472] font-medium after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:text-[#EF4472]"
-                      : "text-gray-700 hover:text-[#EF4472]"
+                      ? "text-[#EF4472] after:absolute after:bottom-1 after:left-2 after:right-2 after:h-0.5 after:bg-[#EF4472]"
+                      : "text-gray-600 hover:text-[#EF4472]"
                   }`
                 }
               >
@@ -61,15 +61,16 @@ const Header = () => {
             ))}
           </div>
         </div>
-        {/* Mobile Nav */}
+
+        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4">
+          <div className="md:hidden bg-white pb-2 space-y-1">
             {links.map((link) => (
               <NavLink
-                key={link.name}
+                key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `block px-4 py-3 rounded-md ${
+                  `block px-4 py-2.5 text-sm rounded-md ${
                     isActive
                       ? "bg-red-50 text-[#EF4472] font-medium"
                       : "text-gray-700 hover:bg-red-50"
